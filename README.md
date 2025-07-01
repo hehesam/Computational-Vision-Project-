@@ -36,18 +36,23 @@ This guide will help you navigate the repository structure. Below are important 
 - The demo model aims to provide a real-time pose estimation pipeline. This pipeline utilizes MediaPipe to capture human joints, maps them into NTU format, and then leverages the trained models to classify human actions.
 - **Note:** Despite the integration, the results of the real-time pose estimator were not successful. This section serves as an experimental exploration rather than a production-ready solution.
 
-### 3. Additional Resources
-- **Results Indicator:** A file located at `Results/clip_text_paper_texts_fig_100.gif` signifies the successful running of the MotionCLIP model. This animated GIF provides a visual confirmation of the output and can be viewed to verify the operation of the MotionCLIP integration.
+### 3. Running the MotionCLIP Demo GIF
+- A key visual indicator of the successful execution of the MotionCLIP model is the animated GIF located at:
+  
+  `Results/clip_text_paper_texts_fig_100.gif`
+  
+- You can view the demo directly in this README with the image below:
+
+![MotionCLIP Demo](Results/clip_text_paper_texts_fig_100.gif)
 
 ---
 
-## How to Navigate This Repository
-
+## Additional Resources
 - **Documentation:** This README serves as a navigation guide. Refer to in-code comments and documentation within each module for further details.
 - **Folder Structure:**
   - **/src/**: Contains source code for the defined models and utility functions.
   - **/experiments/**: Scripts for running experiments and evaluations.
-  - **/Results/**: Contains output results including visual indicators such as `clip_text_paper_texts_fig_100.gif`.
+  - **/Results/**: Contains output results including visual indicators such as the MotionCLIP demo GIF.
   - **/configs/**: Configuration files for training and model integration.
 - **Testing & Evaluation:** Explore the `/tests/` directory for testing scripts, and use experiment scripts in `/experiments/` to replicate reported results.
 

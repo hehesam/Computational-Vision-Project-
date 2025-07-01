@@ -33,17 +33,20 @@ This guide will help you navigate the repository structure. Below are important 
       - [MotionCLIP Pretrained Model 3](https://github.com/GuyTevet/MotionCLIP/releases/tag/model3)
       
 ### 2. Demo Model Analysis
-- The demo model aims to provide a real-time pose estimation pipeline. This pipeline utilizes MediaPipe to capture human joints, maps them into NTU format, and then leverages the trained models to classify human actions.
-- **Note:** Despite the integration, the results of the real-time pose estimator were not successful. This section serves as an experimental exploration rather than a production-ready solution.
-
-### 3. Running the MotionCLIP Demo GIF
-- A key visual indicator of the successful execution of the MotionCLIP model is the animated GIF located at:
+- **Successful MotionCLIP Execution:**
+  - A key visual indicator of the successful execution of the MotionCLIP model is the animated GIF located at:
   
-  `Results/clip_text_paper_texts_fig_100.gif`
-  
-- You can view the demo directly in this README with the image below:
+    `Results/clip_text_paper_texts_fig_100.gif`
+    
+  - You can view the demo directly in this README with the image below:
 
-![MotionCLIP Demo](Results/clip_text_paper_texts_fig_100.gif)
+  ![MotionCLIP Demo](Results/clip_text_paper_texts_fig_100.gif)
+
+- **Failed Mapping from MediaPipe to NTU Format:**
+  - Another animated GIF, located at `Results/output.gif`, demonstrates an experimental attempt at real-time pose estimation. In this demo, the model tried to map MediaPipe-detected joints into the NTU format before classifying the actions.
+  - **Explanation:** The results shown in this GIF indicate that the mapping from MediaPipe joints to the NTU format was not successful. This failure highlights the challenges in aligning different pose estimation outputs with the required input format for the classification models. The experiment serves as a valuable learning point for further refinement of the preprocessing and mapping pipeline.
+
+  ![Failed Mapping Demo](Results/output.gif)
 
 ---
 
@@ -52,7 +55,7 @@ This guide will help you navigate the repository structure. Below are important 
 - **Folder Structure:**
   - **/src/**: Contains source code for the defined models and utility functions.
   - **/experiments/**: Scripts for running experiments and evaluations.
-  - **/Results/**: Contains output results including visual indicators such as the MotionCLIP demo GIF.
+  - **/Results/**: Contains output results including visual indicators such as the MotionCLIP demo GIF and the failed mapping GIF.
   - **/configs/**: Configuration files for training and model integration.
 - **Testing & Evaluation:** Explore the `/tests/` directory for testing scripts, and use experiment scripts in `/experiments/` to replicate reported results.
 
